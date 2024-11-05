@@ -13,14 +13,21 @@
         <action
             android:id="@+id/action_home_to_attendance"
             app:destination="@id/navigation_attendance" />
+        <action
+            android:id="@+id/action_home_to_notification"
+            app:destination="@id/navigation_notification" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_attendance"
         android:name="com.example.fap.ui.attendance.AttendanceFragment"
         android:label="Attendance"
-        tools:layout="@layout/fragment_attendance" />
-    <!-- Add this inside the navigation element -->
+        tools:layout="@layout/fragment_attendance">
+        <action
+            android:id="@+id/action_attendance_to_detail"
+            app:destination="@id/navigation_attendance_detail" />
+    </fragment>
+
     <fragment
         android:id="@+id/navigation_attendance_detail"
         android:name="com.example.fap.ui.attendance.AttendanceDetailFragment"
@@ -31,10 +38,31 @@
             app:argType="string" />
     </fragment>
 
-    <!-- Add this action inside the navigation_attendance fragment -->
-    <action
-        android:id="@+id/action_attendance_to_detail"
-        app:destination="@id/navigation_attendance_detail" />
+    <fragment
+        android:id="@+id/navigation_notification"
+        android:name="com.example.fap.ui.notification.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification">
+        <action
+            android:id="@+id/action_notification_to_detail"
+            app:destination="@id/navigation_notification_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notification_detail"
+        android:name="com.example.fap.ui.notification.NotificationDetailFragment"
+        android:label="Notification Detail"
+        tools:layout="@layout/fragment_notification_detail">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="content"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_schedule"

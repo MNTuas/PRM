@@ -22,6 +22,10 @@ public class HomeFragment extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.action_home_to_attendance)
         );
 
+        binding.btnNotification.setOnClickListener(v ->
+                Navigation.findNavController(v).navigate(R.id.action_home_to_notification)
+        );
+
         return root;
     }
 

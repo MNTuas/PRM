@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FAP</string>
+    <string name="title_home">Home</string>
+    <string name="title_schedule">Schedule</string>
+    <string name="title_mark">Mark</string>
+    <string name="title_profile">Profile</string>
+</resources>

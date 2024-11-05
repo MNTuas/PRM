@@ -122,15 +122,12 @@
         android:id="@+id/btn_attendance"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
         android:layout_marginTop="16dp"
         android:padding="16dp"
         android:text="Attendance"
         android:textSize="18sp"
         app:cornerRadius="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_timetable_date"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
 
     <TextView
         android:id="@+id/tv_weekly_timetable"

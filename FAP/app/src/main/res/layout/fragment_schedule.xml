@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="#FFFFFF"
+        app:contentInsetStartWithNavigation="0dp"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
@@ -21,15 +22,27 @@
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:contentDescription="Back to previous screen"
-            android:padding="12dp"/>
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Exam schedule"
-            android:textSize="20sp"
+            android:layout_marginStart="32dp"
+            android:text="Exam Schedule"
             android:textColor="#000000"
-            android:layout_marginStart="32dp"/>
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Menu"
+            android:padding="12dp"
+            android:src="@drawable/ic_more_vert" />
     </androidx.appcompat.widget.Toolbar>
 
     <TextView

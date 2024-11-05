@@ -74,11 +74,48 @@
         android:id="@+id/navigation_mark"
         android:name="com.example.fap.ui.mark.MarkFragment"
         android:label="@string/title_mark"
-        tools:layout="@layout/fragment_mark" />
+        tools:layout="@layout/fragment_mark">
+        <action
+            android:id="@+id/action_markFragment_to_markDetailFragment"
+            app:destination="@id/markDetailFragment" />
+    </fragment>
+
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.fap.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+
+
+
+
+        <fragment
+            android:id="@+id/markFragment"
+            android:name="com.example.fap.ui.mark.MarkFragment"
+            android:label="Mark"
+            tools:layout="@layout/fragment_mark">
+            <action
+                android:id="@+id/action_markFragment_to_markDetailFragment"
+                app:destination="@id/markDetailFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/markDetailFragment"
+            android:name="com.example.fap.ui.mark.MarkDetailFragment"
+            android:label="Mark Detail"
+            tools:layout="@layout/fragment_mark_detail">
+            <argument
+                android:name="courseCode"
+                app:argType="string" />
+            <argument
+                android:name="courseName"
+                app:argType="string" />
+            <argument
+                android:name="className"
+                app:argType="string" />
+            <argument
+                android:name="average"
+                app:argType="float" />
+        </fragment>
 </navigation>

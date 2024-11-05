@@ -9,7 +9,32 @@
         android:id="@+id/navigation_home"
         android:name="com.example.fap.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_attendance"
+            app:destination="@id/navigation_attendance" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_attendance"
+        android:name="com.example.fap.ui.attendance.AttendanceFragment"
+        android:label="Attendance"
+        tools:layout="@layout/fragment_attendance" />
+    <!-- Add this inside the navigation element -->
+    <fragment
+        android:id="@+id/navigation_attendance_detail"
+        android:name="com.example.fap.ui.attendance.AttendanceDetailFragment"
+        android:label="Attendance Detail"
+        tools:layout="@layout/fragment_attendance_detail">
+        <argument
+            android:name="courseId"
+            app:argType="string" />
+    </fragment>
+
+    <!-- Add this action inside the navigation_attendance fragment -->
+    <action
+        android:id="@+id/action_attendance_to_detail"
+        app:destination="@id/navigation_attendance_detail" />
 
     <fragment
         android:id="@+id/navigation_schedule"
